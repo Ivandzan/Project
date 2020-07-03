@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#field {
+    height: 500px;
+    width: 500px;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+.field__cell {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+.field__cell--null {
+    background-color: rgb(63, 1, 107);
+}
+
+.field__cell--tile {
+    font-weight: bold;
+    background-color: rgb(44, 1, 63);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+#modal {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    position: relative;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 90px;
+}
+
+#modal.modal--visible {
+    visibility: visible;
+    opacity: 1;
+}
